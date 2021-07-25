@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  width: 900px; /*je constate que celuici n'a pas d'importance ici*/
+  max-width: 90%;
+  margin: 0px auto;
+}
+
+body {
+  background-color: rgb(201, 230, 241);
+  font-family: Arial, Helvetica, sans-serif, sans-serif;
+}
+
+.navbar-wrapper {
+  background-color: rgb(8, 6, 27);
+  border-top: 4px solid rgb(59, 134, 221);
+  padding: 1em 0;
+  margin-bottom: 5px;
+}
+.wrapper .body_wrapper,
+.wrapper .nav {
+  display: inline-block;
+}
+
+.navbar-right-wrapper {
+  float: right;
+}
+
+.navbar-right-wrapper a {
+  font-size: 0.9em;
+}
+
+.navbar-right-wrapper a,
+.navbar-left-wrapper a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 1.1em;
+}
+.navbar-left-wrapper .brand {
+  font-size: 26px;
+  font-style: italic;
+  color: white;
+}
+
+.navbar-right-wrapper a:last-child {
+  margin-right: 0;
+}
+
+.navbar-right-wrapper a:hover,
+.navbar-left-wrapper a:hover {
+  color: #1ce;
+}
+.navbar-right-wrapper {
+  margin-top: 7.6px;
+}
+.article_wrapper {
+  display: flex;
+}
+.right-wrapper {
+  margin-left: 15px;
+}

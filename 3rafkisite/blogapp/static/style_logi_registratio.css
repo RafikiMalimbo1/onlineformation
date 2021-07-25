@@ -1,0 +1,53 @@
+form {
+  border: solid 0px;
+  margin-bottom: 5px;
+  padding: 5px;
+  border-radius: 8px;
+  background-color: beige;
+  box-shadow: gray 2px 0.5px 0.4pc;
+  width: 500px;
+}
+
+form div {
+  margin-bottom: 15px;
+  margin-left: 30px;
+}
+form .borger-bottom {
+  margin-left: 10px;
+}
+.form-control-label {
+  width: 450px;
+  height: 30px;
+}
+.btn {
+  margin-top: 5px;
+  padding: 5px;
+  color: aquamarine;
+  background-color: rgb(86, 120, 216);
+  border-radius: 6px;
+}
+
+.btn:hover {
+  color: #1ce;
+  background-color: gray;
+}
+
+.is-invalid {
+  width: 450px;
+  height: 30px;
+  border: red;
+  box-shadow: red 2px 0.5px 0.4pc;
+}
+span {
+  color: red;
+  margin-left: 0px;
+  margin-bottom: 0px;
+}
+form .invalid-feedback {
+  margin-bottom: 15px;
+  margin-left: 0px;
+}
+
+.form-control-label {
+  margin-bottom: 20px;
+}

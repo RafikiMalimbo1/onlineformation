@@ -1,0 +1,73 @@
+.wrapper .sidebar_wrapper {
+  float: right;
+}
+
+/* .wrapper article{
+ display: inline-block;
+} */
+
+.article_wrapper,
+.sidebar_wrapper {
+  border: solid 0px;
+  margin-bottom: 5px;
+  padding: 5px;
+  border-radius: 8px;
+  background-color: beige;
+  box-shadow: gray 2px 0.5px 0.4pc;
+}
+
+.article_wrapper {
+  width: 500px;
+}
+
+.sidebar_wrapper {
+  width: 350px;
+}
+
+.sidebar_wrapper ul {
+  padding-left: 30px;
+}
+
+.head_wrapper {
+  border-bottom: solid 0.1px gray;
+  margin-bottom: 9px;
+  width: 400px;
+  padding-bottom: 5px;
+}
+
+.head_wrapper .author_wrapper {
+  color: rgb(38, 64, 182);
+  font-size: 20px;
+}
+
+.head_wrapper .verry_smal_wrapper {
+  font-size: 10px;
+  color: gray;
+}
+h2 a {
+  text-decoration: none;
+  color: black;
+}
+.title_ {
+  margin-top: 20 px;
+}
+.button_pages {
+  border: solid 1px rgb(52, 102, 230);
+  padding: 3px;
+  color: rgb(52, 102, 230);
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.button_pages_wrapper {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.button_pages:hover {
+  background-color: rgb(114, 152, 248);
+  color: white;
+}
+.button_pages_color {
+  background-color: rgb(114, 152, 248);
+  color: white;
+}

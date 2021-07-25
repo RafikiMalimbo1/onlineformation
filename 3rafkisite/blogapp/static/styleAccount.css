@@ -1,0 +1,19 @@
+.rounded-circle{
+    border-radius: 50%;
+    height: 60px;
+    /* width: auto; */
+}
+.media-body{
+    /* float: right; */
+    margin-left: 20px;
+}
+
+.media-body h2{ 
+    font-size: 35px;
+    margin-bottom: 5px;
+}
+
+.rounded-circle1{
+    border-radius: 50%;
+    height: 20px;
+}

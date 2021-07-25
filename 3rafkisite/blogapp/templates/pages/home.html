@@ -1,0 +1,39 @@
+{% extends "layout/defaullt.html" %}
+{% block body %}
+
+<div class="body_wrapper">
+  {% for post in postes.items %} {# items vu que c'est um objet qui vient de la
+  pqginatio#}
+  <article class="article_wrapper">
+    <img class="rounded-circle article"
+      src="{{url_for('static', filename='profile_image/' + post.author.image_file)}}" />
+    <div class="right-wrapper">
+      <div class="head_wrapper">
+        <small class="author_wrapper"><a href="{{url_for('user_posts',username = post.author.username)}}">{{
+            post.author.username}}</a>
+        </small>
+        <small class="verry_smal_wrapper">{{post.date_posted.strftime('%Y-%m-%d')}}</small>
+      </div>
+      <div>
+        <h2 class="title_">
+          <a href="{{url_for('owner_post', post_id = post.id)}}">
+            {{post.title}}</a>
+        </h2>
+        <p>{{ post.content }}</p>
+      </div>
+    </div>
+  </article>
+  {% endfor %}
+  <div class="button_pages_wrapper">
+    {% for page_num in postes.iter_pages(left_edge =1,right_edge =1,left_current
+    = 1, right_current =2) %} {% if page_num %} {% if postes.page == page_num %}
+    <a href="{{url_for('home', page=page_num)}}" class="button_pages button_pages_color">{{page_num}}</a>
+    {% else %}
+    <a href="{{url_for('home', page=page_num)}}" class="button_pages">{{page_num}}</a>
+    {% endif %}
+    {% else %} ...
+    {% endif %}
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

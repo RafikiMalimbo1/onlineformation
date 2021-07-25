@@ -1,0 +1,42 @@
+{% extends "layout/defaullt.html" %}
+{% block body %}
+
+<div class="body_wrapper">
+    <article class="article_wrapper">
+        <img class="rounded-circle article"
+            src="{{url_for('static', filename='profile_image/' + post.author.image_file)}}">
+        <div class='right-wrapper'>
+            <div class="head_wrapper">
+                <small class="author_wrapper"><a href="{{url_for('user_posts',username = post.author.username)}}">{{
+                        post.author.username}}</a></small>
+                <small class="verry_smal_wrapper">{{post.date_posted.strftime('%Y-%m-%d')}}</small>
+                {% if post.author ==current_user %}
+                <div class="updated_button_wrapper">
+                    <div><a href="{{url_for('updated_post', post_id = post.id)}}" class='updated_button'>Update</a>
+                    </div>
+                    <div class="box"> <a class="button_delete" href="#popup1">Delete</a></div>
+                </div>
+                {% endif %}
+            </div>
+            <div>
+                <h2 class="title_"> {{post.title}}</h2>
+                <P>{{ post.content }}</P>
+            </div>
+        </div>
+
+    </article>
+</div>
+
+<div id="popup1" class="overlay">
+    <div class="popup">
+        <h2>Delete Post?</h2>
+        <a class="close" href="#">&times;</a>
+        <div class="content">
+            <form action="{{url_for('delete_post',post_id = post.id)}}" method="POST">
+                <input type="submit" value="Delete" class="button_popup">
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

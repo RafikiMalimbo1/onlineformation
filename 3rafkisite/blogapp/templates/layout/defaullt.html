@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'style_home.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'style_blo.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'style_logi_registratio.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'styleAccount.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'style_update.css')}}">
+    <title>
+        {% if title %}
+        Flask Blog - {{title}}
+        {% else %}
+        Flask Blog
+        {% endif %}
+    </title>
+</head>
+
+<body>
+
+    {% include 'layout/nav.html' %}
+    <div class="wrapper">
+        {% with messages = get_flashed_messages(with_categories = true) %}
+        {% if messages %}
+        {% for category, message in messages %}
+        <div class="arlet arlet-{{ category }}">{{message}}</div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+    </div>
+    <div class="wrapper">
+        {% block body %}{% endblock %}
+        {% include 'layout/sidebar.html' %}
+    </div>
+</body>
+
+</html>
